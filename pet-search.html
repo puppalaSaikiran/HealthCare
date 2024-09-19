@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/logo.png" type="image/png" />
+    <title>Health Care</title>
+
+    <link rel="stylesheet" href="vender/bootstrap/css/bootstrap.min.css" />
+
+    <link
+      rel="stylesheet"
+      href="../../../cdn.jsdelivr.net/npm/bootstrap-icons%401.10.3/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" href="vender/sidebar/demo.css" />
+
+    <link
+      rel="stylesheet"
+      href="vender/materialdesign/css/materialdesignicons.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="osahan-page d-flex flex-column vh-100 bg-light">
+      <div
+        class="osahan-page-header d-flex align-items-center justify-content-between mb-auto p-3 bg-white shadow-sm"
+      >
+        <a href="home.html" class="text-black"
+          ><span class="mdi mdi-arrow-left mdi-18px"></span
+        ></a>
+        <h6 class="mb-0 ms-3 me-auto text-black fw-bold">Pet Search</h6>
+        <div class="d-flex align-items-center gap-3">
+          <a
+            href="#"
+            class="toggle d-flex align-items-center justify-content-center bg-white icon fs-5 hc-nav-trigger hc-nav-1"
+            role="button"
+            aria-controls="hc-nav-1"
+            ><i class="bi bi-list mdi-18px"></i
+          ></a>
+        </div>
+      </div>
+      <div class="osahan-page-body vh-100 my-auto overflow-auto p-3">
+        <div class="mb-4">
+          <label class="form-label fw-bold">Location</label>
+          <div class="input-group flex-nowrap">
+            <span class="input-group-text"
+              ><span class="mdi mdi-map-marker-outline"></span
+            ></span>
+            <input
+              type="text"
+              class="form-control bg-light px-3 py-2"
+              placeholder="New York, NY , US"
+            />
+          </div>
+        </div>
+<!-- 
+        <div class="pb-4">
+          <p class="form-label fw-bold pb-2 m-0">Pet Types</p>
+          <div
+            class="btn-group gap-2"
+            role="group"
+            aria-label="Basic checkbox toggle button group"
+          >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="btncheck1"
+              autocomplete="off"
+            />
+            <label
+              class="btn btn-outline-secondary rounded-pill"
+              for="btncheck1"
+              ><span class="mdi mdi-dog lh-sm m-0"></span> Dogs</label
+            >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="btncheck2"
+              autocomplete="off"
+            />
+            <label
+              class="btn btn-outline-secondary rounded-pill"
+              for="btncheck2"
+              ><span class="mdi mdi-bird lh-sm m-0"></span> Birds</label
+            >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="btncheck3"
+              autocomplete="off"
+            />
+            <label
+              class="btn btn-outline-secondary rounded-pill"
+              for="btncheck3"
+              ><span class="mdi mdi-cat lh-sm m-0"></span> Cats</label
+            >
+          </div>
+          <div
+            class="btn-group gap-2 mt-2"
+            role="group"
+            aria-label="Basic checkbox toggle button group"
+          >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="btncheck1s"
+              autocomplete="off"
+            />
+            <label
+              class="btn btn-outline-secondary rounded-pill"
+              for="btncheck1s"
+              ><span class="mdi mdi-fish lh-sm m-0"></span> Fish</label
+            >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="btncheck2s"
+              autocomplete="off"
+            />
+            <label
+              class="btn btn-outline-secondary rounded-pill"
+              for="btncheck2s"
+              ><span class="mdi mdi-horse lh-sm m-0"></span> Horses</label
+            >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="btncheck3s"
+              autocomplete="off"
+            />
+            <label
+              class="btn btn-outline-secondary rounded-pill"
+              for="btncheck3s"
+              ><span class="mdi mdi-rabbit lh-sm m-0"></span> Rabbits</label
+            >
+          </div>
+        </div>
+        <div class="pb-4">
+          <p class="form-label fw-bold pb-2 m-0">
+            Gender <small class="text-secondary fw-normal">(Optioal)</small>
+          </p>
+          <div
+            class="btn-group gap-2"
+            role="group"
+            aria-label="Basic checkbox toggle button group"
+          >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="btncheck1c"
+              autocomplete="off"
+            />
+            <label
+              class="btn btn-outline-secondary rounded-pill"
+              for="btncheck1c"
+              >Any</label
+            >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="btncheck2c"
+              autocomplete="off"
+            />
+            <label
+              class="btn btn-outline-secondary rounded-pill"
+              for="btncheck2c"
+              >Male</label
+            >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="btncheck3c"
+              autocomplete="off"
+            />
+            <label
+              class="btn btn-outline-secondary rounded-pill"
+              for="btncheck3c"
+              >Female</label
+            >
+          </div>
+        </div>
+        <div class="pb-4">
+          <p class="form-label fw-bold pb-2 m-0">
+            Size <small class="text-secondary fw-normal">(Optioal)</small>
+          </p>
+          <div
+            class="btn-group gap-2"
+            role="group"
+            aria-label="Basic checkbox toggle button group"
+          >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="btncheck1cs"
+              autocomplete="off"
+            />
+            <label
+              class="btn btn-outline-secondary rounded-pill"
+              for="btncheck1cs"
+              >Small</label
+            >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="btncheck2cs"
+              autocomplete="off"
+            />
+            <label
+              class="btn btn-outline-secondary rounded-pill"
+              for="btncheck2cs"
+              >Medium</label
+            >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="btncheck3cs"
+              autocomplete="off"
+            />
+            <label
+              class="btn btn-outline-secondary rounded-pill"
+              for="btncheck3cs"
+              >Large</label
+            >
+          </div>
+        </div>
+        <div class="pb-4">
+          <p class="form-label fw-bold pb-2 m-0">
+            Age <small class="text-secondary fw-normal">(Optioal)</small>
+          </p>
+          <div
+            class="btn-group gap-2"
+            role="group"
+            aria-label="Basic checkbox toggle button group"
+          >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="btncheck1css"
+              autocomplete="off"
+            />
+            <label
+              class="btn btn-outline-secondary rounded-pill"
+              for="btncheck1css"
+              >Body</label
+            >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="btncheck2css"
+              autocomplete="off"
+            />
+            <label
+              class="btn btn-outline-secondary rounded-pill"
+              for="btncheck2css"
+              >Young</label
+            >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="btncheck3css"
+              autocomplete="off"
+            />
+            <label
+              class="btn btn-outline-secondary rounded-pill"
+              for="btncheck3css"
+              >Adult</label
+            >
+          </div> -->
+        </div>
+      </div>
+      <div class="osahan-page-footer mt-auto p-3">
+        <a
+          href="rabbits-details.html"
+          class="btn btn-primary rounded-pill w-100 btn-lg"
+          >Search</a
+        >
+      </div>
+    </div>
+    <nav id="main-nav">
+      <ul class="second-nav">
+        <li class="osahan-user-profile bg-primary">
+          <a href="my-account.html"><div class="d-flex align-items-center gap-2">
+            <img src="img/girl.jpg" alt class="rounded-pill img-fluid cw-30" />
+            <div class="ps-1">
+              <h6 class="fw-bold text-white mb-0">Hey, Samantha!</h6>
+              <p class="text-white-50 m-0 small">+91 12345-67890</p>
+            </div>
+          </div></a>
+        </li>
+        <li>
+          <a
+            href="my-profile.html"
+            class="d-flex align-items-center gap-4 mb- text-decoration-none text-black"
+          >
+            <span class="material-symbols-outlined">person</span>
+            <p class="text-black message-head mb-0">My Profile</p>
+          </a>
+        </li>
+        <li>
+          <a
+          href="wishlist.html"
+          class="d-flex align-items-center gap-4 mb- text-decoration-none  "
+        >
+        <span class="material-symbols-outlined">
+          bookmark
+          </span>
+        <p class="  message-head mb-0">Wishlist</p>
+        </a>
+        </li>
+        <li>
+          <a
+            href="account-security.html"
+            class="d-flex align-items-center gap-4 mb- text-decoration-none text-black"
+          >
+            <span class="material-symbols-outlined">verified_user</span>
+            <p class="text-black message-head mb-0">Account Security</p>
+          </a>
+        </li>
+        <li>
+          <a
+            href="app-appearance.html"
+            class="d-flex align-items-center gap-4 mb-0 text-decoration-none text-black"
+          >
+            <span class="material-symbols-outlined">visibility</span>
+            <p class="text-black message-head mb-0">App Appearance</p>
+          </a>
+        </li>
+        <li>
+          <a
+            href="help-support.html"
+            class="d-flex align-items-center gap-4 mb-0 text-decoration-none text-black"
+          >
+            <span class="material-symbols-outlined">description</span>
+            <p class="text-black message-head mb-0">Help & Support</p>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="d-flex align-items-center gap-4 mb-0 text-decoration-none text-black"
+          >
+            <span class="material-symbols-outlined">groups</span>
+            <p class="text-black message-head mb-0">Invite Friends</p>
+          </a>
+        </li>
+        <li>
+          <a
+            href
+            class="d-flex align-items-center gap-4 mb-4 text-decoration-none"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasBottom"
+            aria-controls="offcanvasBottom"
+          >
+            <span class="material-symbols-outlined text-danger">logout</span>
+            <p class="text-danger message-head mb-0">Logout</p>
+          </a>
+        </li>
+      </ul>
+      <ul class="bottom-nav">
+        <li class="sidebar-footer d-flex justify-content-center">
+          Version 1.0.0
+        </li>
+      </ul>
+    </nav>
+    <div
+      class="offcanvas offcanvas-bottom"
+      tabindex="-1"
+      id="offcanvasBottom"
+      aria-labelledby="offcanvasBottomLabel"
+    >
+      <div class="offcanvas-body p-2">
+        <div class="text-center">
+          <div class="fs-1">
+            <span class="material-symbols-outlined text-danger">logout</span>
+          </div>
+          <h5 class="text-danger mb-2">Logout</h5>
+          <p class="mb-3 fs-5 text-dark">Are you sure you want to log out?</p>
+          <div class="d-flex gap-3 justify-content-center">
+            <button
+              type="button"
+              class="btn btn-outline-primary rounded-5 px-3 py-2 btn-lg"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            >
+              Cancel
+            </button>
+            <a href="login-input.html"><button
+              type="button"
+              class="btn bg-primary text-white rounded-5 px-3 btn-lg"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            >
+              Yes. Logout
+            </button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="vender/bootstrap/js/bootstrap.bundle.min.js"
+      type="671681dcfcb06e641235a679-text/javascript"
+    ></script>
+
+    <script
+      src="vender/jquery/jquery.min.js"
+      type="671681dcfcb06e641235a679-text/javascript"
+    ></script>
+
+    <script
+      src="vender/sidebar/hc-offcanvas-nav.js"
+      type="671681dcfcb06e641235a679-text/javascript"
+    ></script>
+
+    <script
+      src="js/script.js"
+      type="671681dcfcb06e641235a679-text/javascript"
+    ></script>
+    <script
+      src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
+      data-cf-settings="671681dcfcb06e641235a679-|49"
+      defer
+    ></script>
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+      integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+      data-cf-beacon='{"rayId":"89e51403f8c12e9d","version":"2024.4.1","r":1,"token":"dd471ab1978346bbb991feaa79e6ce5c","b":1}'
+      crossorigin="anonymous"
+    ></script>
+  </body>
+
+</html>

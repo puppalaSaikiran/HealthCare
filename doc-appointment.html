@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo.png" type="image/png" />
+    <title>Health Care</title>
+    <link rel="stylesheet" href="vender/bootstrap/css/bootstrap.min.css" />
+
+    <link
+      rel="stylesheet"
+      href="../../../cdn.jsdelivr.net/npm/bootstrap-icons%401.10.3/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" href="vender/sidebar/demo.css" />
+
+    <link
+      rel="stylesheet"
+      href="vender/materialdesign/css/materialdesignicons.min.css"
+    />
+
+    <link
+    rel="stylesheet"
+    href="assets/plugins/fontawesome/css/fontawesome.min.css"
+  />
+
+    <script
+      src="https://kit.fontawesome.com/a30079436d.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 15px;
+    }
+
+    h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="time"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 100px;
+    }
+
+    button[type="submit"] {
+      background-color: #6504b5;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 16px;
+      display: block;
+      width: 100%;
+    }
+
+    /* Sidebar styles */
+    #main-nav {
+      position: fixed;
+      left: -250px;
+      top: 0;
+      width: 250px;
+      height: 100%;
+      background-color: #fff;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+      transition: left 0.3s;
+    }
+
+    #main-nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    #main-nav ul li {
+      padding: 10px 20px;
+    }
+
+    #main-nav ul li a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    #main-nav ul li a i {
+      margin-right: 10px;
+    }
+
+    #main-nav ul li a:hover {
+      background-color: #f8f9fa;
+    }
+
+    .doctor-widget span{
+      margin-left: 20px;
+    }
+
+    .icon-text {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .icon-text i {
+      margin-right: 10px;
+      font-size: 1.5rem;
+    }
+
+    .icon-text h5 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .main-nav-open {
+      left: 0 !important;
+    }
+
+    .osahan-page-footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .osahan-page-footer .col {
+      padding: 5px 0;
+    }
+
+    .osahan-page-footer .icon {
+      font-size: 24px;
+    }
+
+    #items{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .custom-scroll::-webkit-scrollbar {
+        height: 5px;
+    }
+
+    .custom-scroll::-webkit-scrollbar-thumb {
+        background-color: #888; 
+        border-radius: 10px;
+    }
+
+    .custom-scroll::-webkit-scrollbar-thumb:hover {
+        background-color: #555; 
+    }
+
+  </style>
+</head>
+<body style="background-color: #f8f9fa;">
+    <div class="osahan-page d-flex flex-column vh-100 bg-light">
+      <div class="osahan-page-header d-flex align-items-center justify-content-between  p-3 bg-white shadow-sm">
+        <a href="doc-profile.html" class="text-black"><span class="mdi mdi-arrow-left mdi-18px"></span></a>
+        <h6 class="mb-0 ms-3 me-auto text-black fw-bold">Schedule Appointment</h6>
+        <div class="d-flex align-items-center gap-3">
+          <a href="notification.html" class="icon"><span class="mdi mdi-bell-outline mdi-18px"></span></a>
+          <a href="#" class="toggle d-flex align-items-center justify-content-center bg-white icon fs-5 hc-nav-trigger hc-nav-1" role="button" aria-controls="hc-nav-1"><i class="bi bi-list mdi-18px"></i></a>
+        </div>
+      </div>
+      <div class="container" style="overflow-y: scroll;">
+        <form id="appointmentForm" method="post" action="payment.html">
+          <h3>Gokhale Appointment</h3>
+          <div class="">
+              <label for="schedule">Schedule Date:</label>
+              <input class="form-control" type="date" id="schedule" name="schedule" required>
+          </div>
+          <div class="mb-2">
+              <label for="time">Time Slot:</label>
+              <div class="card-body d-flex gap-2 custom-scroll" style="overflow-x: scroll;">
+                <div class="slot-box p-2 border rounded text-center text-danger text-nowrap">09:00 AM</div>
+                <div class="slot-box p-2 border rounded text-center text-success text-nowrap">10:00 AM</div>
+                <div class="slot-box p-2 border rounded text-center text-success text-nowrap">11:00 AM</div>
+                <div class="slot-box p-2 border rounded text-center text-success text-nowrap">12:00 PM</div>
+                <div class="slot-box p-2 border rounded text-center text-success text-nowrap">1:00 PM</div>
+                <div class="slot-box p-2 border rounded text-center text-success text-nowrap">2:00 PM</div>
+                <div class="slot-box p-2 border rounded text-center text-success text-nowrap">3:00 PM</div>
+                <div class="slot-box p-2 border rounded text-center text-success text-nowrap">4:00 PM</div>
+                <div class="slot-box p-2 border rounded text-center text-success text-nowrap">5:00 PM</div>
+                <div class="slot-box p-2 border rounded text-center text-success text-nowrap">6:00 PM</div>
+                <div class="slot-box p-2 border rounded text-center text-success text-nowrap">7:00 PM</div>
+            </div>
+          </div>
+          <div class="">
+              <label for="booking-for">Booking For:</label>
+              <select id="booking-for" name="booking-for" required>
+                  <option value="self">Self</option>
+                  <option value="family-friends">Family & Friends</option>
+              </select>
+          </div>
+          <div id="self-fields">
+              <div class="">
+                  <label for="full-name">Full Name:</label>
+                  <input class="form-control" placeholder="Enter the Name" type="text" id="full-name" name="full-name" required>
+              </div>
+              <div class="d-flex">
+                  <div>
+                      <label for="age">Age:</label>
+                      <select id="age" name="age" required>
+                          <option value="">Select</option>
+                          <option value="0-5">0-5</option>
+                          <option value="5-10">5-10</option>
+                          <option value="10-15">10-15</option>
+                          <option value="15-20">15-20</option>
+                          <option value="20-30">20-30</option>
+                          <option value="30-40">30-40</option>
+                          <option value="40-50">40-50</option>
+                          <option value="50-60">50-60</option>
+                          <option value="60-70">60-70</option>
+                          <option value="70-100">70-100</option>
+                      </select>
+                  </div>
+                  <div class="">
+                      <label for="phone" style="margin-left: 20px;">Phone Number:</label>
+                      <input class="form-control" type="number" placeholder="Enter Mobile Number" id="phone" name="phone" style="margin-left: 20px;" required>
+                  </div>
+              </div>
+              <div class="">
+                  <label for="gender">Gender:</label>
+                  <select id="gender" name="gender" required>
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                  </select>
+              </div>
+          </div>
+          <div>
+              <label for="problem">Write Your Problem:</label>
+              <textarea id="problem" name="problem" required></textarea>
+          </div>
+          <button class="btn-submit" type="submit">Continue</button>
+      </form>      
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+    
+    </div>
+      <div class="osahan-page-footer mt-auto py-3 px-2 bg-white shadow">
+        <div class="d-flex justify-content-between">
+          <div class="text-center lh-1 text-decoration-none col">
+            <a href="home.html" class="text-decoration-none">
+              <div>
+                <span class="material-symbols-outlined fs-1 icon text-secondary"
+                  >home</span
+                >
+              </div>
+            </a>
+            <a href="home.html" class="text-decoration-none text-secondary"
+              >Home</a
+            >
+          </div>
+          <div class="text-center lh-1 col">
+            <div>
+              <a href="favorite.html"
+                ><span class="material-symbols-outlined fs-1 text-secondary">
+                  home_health
+                  </span></a
+              >
+            </div>
+            <a
+              href="favorite.html"
+              class="text-btn text-decoration-none text-secondary"
+              >Hospital</a
+            >
+          </div>
+          <div class="text-center lh-1 col">
+            <div>
+              <a href="clinical-fav.html"
+                ><span class="material-symbols-outlined fs-1 text-secondary">
+                  help_clinic
+                  </span></a
+              >
+            </div>
+            <a
+              href="clinical-fav.html"
+              class="text-btn text-decoration-none text-secondary"
+              >Clinic</a
+            >
+          </div>
+          <div class="text-center lh-1 col">
+            <div>
+              <a href="diagnostic-fav.html"
+                ><span class="material-symbols-outlined fs-1 text-secondary">
+                  biotech
+                  </span></a
+              >
+            </div>
+            <a
+              href="diagnostic-fav.html"
+              class="text-btn text-decoration-none text-secondary"
+              >Diagnostic</a
+            >
+          </div>
+          <div class="text-center lh-1 col">
+            <div>
+              <a href="History.html"
+                ><span class="material-symbols-outlined fs-1 text-secondary">
+                  overview
+                  </span></a
+              >
+            </div>
+            <a
+              href="History.html"
+              class="text-btn text-decoration-none text-secondary"
+              >History</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav id="main-nav">
+      <ul class="second-nav">
+        <li class="osahan-user-profile bg-primary">
+          <a href="my-account.html"><div class="d-flex align-items-center gap-2">
+            <img
+              src="img/girl.jpg"
+              alt
+              class="rounded-pill img-fluid cw-30"
+            />
+            <div class="ps-1">
+              <h6 class="fw-bold text-white mb-0">Hey, Samantha!</h6>
+              <p class="text-white-50 m-0 small">+91 12345-67890</p>
+            </div>
+          </div></a>
+        </li>
+        <li>
+          <a
+          href="my-profile.html"
+          class="d-flex align-items-center gap-4 mb- text-decoration-none text-black"
+        >
+          <span class="material-symbols-outlined">person</span>
+          <p class="text-black message-head mb-0">My Profile</p>
+        </a>
+        </li>
+        <li>
+          <a
+          href="wishlist.html"
+          class="d-flex align-items-center gap-4 mb- text-decoration-none  "
+        >
+        <span class="material-symbols-outlined">
+          bookmark
+          </span>
+        <p class="  message-head mb-0">Wishlist</p>
+        </a>
+        </li>
+        <li>
+          <a
+          href="account-security.html"
+          class="d-flex align-items-center gap-4 mb- text-decoration-none text-black"
+        >
+          <span class="material-symbols-outlined">verified_user</span>
+          <p class="text-black message-head mb-0">Account Security</p>
+        </a>
+        </li>
+        <li>
+          <a
+          href="app-appearance.html"
+          class="d-flex align-items-center gap-4 mb-0 text-decoration-none text-black"
+        >
+          <span class="material-symbols-outlined">visibility</span>
+          <p class="text-black message-head mb-0">App Appearance</p>
+        </a>
+        </li>
+        <li>
+          <a
+          href="help-support.html"
+          class="d-flex align-items-center gap-4 mb-0 text-decoration-none text-black"
+        >
+          <span class="material-symbols-outlined">description</span>
+          <p class="text-black message-head mb-0">Help & Support</p>
+          
+        </a>
+        </li>
+        <li>
+          <a
+          href="#"
+          class="d-flex align-items-center gap-4 mb-0 text-decoration-none text-black"
+        >
+          <span class="material-symbols-outlined">groups</span>
+          <p class="text-black message-head mb-0">Invite Friends</p>
+        </a>
+        </li>
+        <li>
+          <a
+          href
+          class="d-flex align-items-center gap-4 mb-4 text-decoration-none"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasBottom"
+          aria-controls="offcanvasBottom"
+        >
+          <span class="material-symbols-outlined text-danger">logout</span>
+          <p class="text-danger message-head mb-0">Logout</p>
+        </a>
+        </li>
+      </ul>
+      <ul class="bottom-nav">
+        <li class="sidebar-footer d-flex justify-content-center" >
+          Version 1.0.0
+        </li>
+      </ul>
+    </nav>
+    <div
+          class="offcanvas offcanvas-bottom"
+          tabindex="-1"
+          id="offcanvasBottom"
+          aria-labelledby="offcanvasBottomLabel"
+        >
+          <div class="offcanvas-body p-2">
+            <div class="text-center">
+              <div class="fs-1">
+                <span class="material-symbols-outlined text-danger"
+                  >logout</span
+                >
+              </div>
+              <h5 class="text-danger mb-2">Logout</h5>
+              <p class="mb-3 fs-5 text-dark">
+                Are you sure you want to log out?
+              </p>
+              <div class="d-flex gap-3 justify-content-center">
+                <button
+                  type="button"
+                  class="btn btn-outline-primary rounded-5 px-3 py-2 btn-lg"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  Cancel
+                </button>
+                <a href="login-input.html"><button
+                  type="button"
+                  class="btn bg-primary text-white rounded-5 px-3 btn-lg"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  Yes. Logout
+                </button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+
+   <script>
+    document.getElementById('appointmentForm').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+    
+        
+        window.location.href = 'payment.html';
+    });
+    </script>    
+
+    <script
+      src="vender/bootstrap/js/bootstrap.bundle.min.js"
+      type="f8b04243f1b32a1ddbd07a8e-text/javascript"
+    ></script>
+  
+    <script
+      src="vender/jquery/jquery.min.js"
+      type="f8b04243f1b32a1ddbd07a8e-text/javascript"
+    ></script>
+  
+    <script
+      src="vender/sidebar/hc-offcanvas-nav.js"
+      type="f8b04243f1b32a1ddbd07a8e-text/javascript"
+    ></script>
+  
+    <script
+      src="js/script.js"
+      type="f8b04243f1b32a1ddbd07a8e-text/javascript"
+    ></script>
+    <script
+      src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
+      data-cf-settings="f8b04243f1b32a1ddbd07a8e-|49"
+      defer
+    ></script>
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+      integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+      data-cf-beacon='{"rayId":"89e514098d022e9d","version":"2024.4.1","r":1,"token":"dd471ab1978346bbb991feaa79e6ce5c","b":1}'
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
+

@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/logo.png" type="image/png" />
+    <title>Health Care</title>
+
+    <link rel="stylesheet" href="vender/bootstrap/css/bootstrap.min.css" />
+
+    <link
+      rel="stylesheet"
+      href="../../../cdn.jsdelivr.net/npm/bootstrap-icons%401.10.3/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" href="vender/sidebar/demo.css" />
+
+    <link
+      rel="stylesheet"
+      href="vender/materialdesign/css/materialdesignicons.min.css"
+    />
+
+    <link
+    rel="stylesheet"
+    href="assets/plugins/fontawesome/css/fontawesome.min.css"
+  />
+
+  <script
+      src="https://kit.fontawesome.com/a30079436d.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body style="background-color: #f8f9fa;">
+      <div class="osahan-page d-flex flex-column vh-100 bg-light">
+        <div class="osahan-page-header d-flex align-items-center justify-content-between mb-1  p-3 bg-white shadow-sm">
+          <a href="home.html" class="text-black"><span class="mdi mdi-arrow-left mdi-18px"></span></a>
+          <h6 class="mb-0 ms-3 me-auto text-black fw-bold">History</h6>
+          <div class="d-flex align-items-center gap-3">
+            <a href="notification.html" class="icon"><span class="mdi mdi-bell-outline mdi-18px"></span></a>
+            <a href="#" class="toggle d-flex align-items-center justify-content-center bg-white icon fs-5 hc-nav-trigger hc-nav-1" role="button" aria-controls="hc-nav-1"><i class="bi bi-list mdi-18px"></i></a>
+          </div>
+        </div>  
+        
+        <div class="container-fluid" style="overflow-y: auto; flex-grow: 1;">
+          <div class="row mb-5">
+            <!-- Repeat this block for each history item -->
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+              <div class="p-3 rounded-3 bg-white shadow-sm h-100">
+                <div class="patient-top-details d-flex justify-content-between" style="border-bottom: dashed 2px #a3a1a1; padding-bottom: 7px; margin-bottom: 10px;">
+                  <div>
+                    <span class="invoice-id" style="font-size: 15px;">#INV-0010</span>
+                  </div>
+                  <div>
+                    <span class="date-col d-flex align-items-center" style="color: #858585;">
+                      <span class="material-symbols-outlined" style="width: 20px; margin-right: 0px; font-size: 12px;">
+                        calendar_month
+                      </span>
+                      14-03-2020
+                    </span>
+                  </div>
+                </div>
+                <div class="d-flex flex-sm-row align-items-center">               
+                  <div class="d-flex align-items-center mb-2 mb-sm-0">
+                    <div class="col-4 col-sm-3">
+                      <a href="#"><img class="img-fluid rounded-pill" src="img/avatar/patient4.jpg" alt="Patient" /></a>
+                    </div>
+                    <div class="pat-info-cont col ps-3">
+                      <h5 class="pat-name"><a class="text-black" href="#">Michelle Fairfax</a></h5>
+                      <h6>MaxAid Hospital</h6>
+                      <div class="patient-details-col">
+                        <span>#PT0025</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pat-info-right text-sm-end">
+                    <div class="price">$450</div>
+                    <!-- <div class="view-btn">
+                      <a href="invoice-view.html" class="btn btn-sm btn-outline-primary">Cancel</a>
+                    </div> -->
+                    <div class="view-btn">
+                      <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#cancelModal">
+                        Cancel
+                      </button>
+                    </div>
+                    
+                  </div>
+                  
+                </div>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-primary" type="button"><a href="invoice-view.html" class="text-white">View</a></button>
+                  <!-- <button class="btn btn-primary" type="button">View</button> -->
+                </div>
+              </div>
+            </div>
+            <!-- End of history item block -->
+            
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+              <div class="p-3 rounded-3 bg-white shadow-sm h-100">
+                <div class="patient-top-details d-flex justify-content-between" style="border-bottom: dashed 2px #a3a1a1; padding-bottom: 7px; margin-bottom: 10px;">
+                  <div>
+                    <span class="invoice-id" style="font-size: 15px;">#INV-0010</span>
+                  </div>
+                  <div>
+                    <span class="date-col d-flex align-items-center" style="color: #858585;">
+                      <span class="material-symbols-outlined" style="width: 20px; margin-right: 0px; font-size: 12px;">
+                        calendar_month
+                      </span>
+                      14-03-2020
+                    </span>
+                  </div>
+                </div>
+                <div class="d-flex flex-sm-row align-items-center">               
+                  <div class="d-flex align-items-center mb-2 mb-sm-0">
+                    <div class="col-4 col-sm-3">
+                      <a href="#"><img class="img-fluid rounded-pill" src="img/avatar/patient4.jpg" alt="Patient" /></a>
+                    </div>
+                    <div class="pat-info-cont col ps-3">
+                      <h5 class="pat-name"><a href="#" class="text-black">Michelle Fairfax</a></h5>
+                      <h6>MaxAid Hospital</h6>
+                      <div class="patient-details-col">
+                        <span>#PT0025</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pat-info-right text-sm-end">
+                    <div class="price">$450</div>
+                    <div class="view-btn">
+                      <a href="invoice-view.html" class="btn btn-sm btn-outline-primary">View</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End of history item block -->
+            
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+              <div class="p-3 rounded-3 bg-white shadow-sm h-100">
+                <div class="patient-top-details d-flex justify-content-between" style="border-bottom: dashed 2px #a3a1a1; padding-bottom: 7px; margin-bottom: 10px;">
+                  <div>
+                    <span class="invoice-id" style="font-size: 15px;">#INV-0010</span>
+                  </div>
+                  <div>
+                    <span class="date-col d-flex align-items-center" style="color: #858585;">
+                      <span class="material-symbols-outlined" style="width: 20px; margin-right: 0px; font-size: 12px;">
+                        calendar_month
+                      </span>
+                      14-03-2020
+                    </span>
+                  </div>
+                </div>
+                <div class="d-flex flex-sm-row align-items-center">               
+                  <div class="d-flex align-items-center mb-2 mb-sm-0">
+                    <div class="col-4 col-sm-3">
+                      <a href="#"><img class="img-fluid rounded-pill" src="img/avatar/patient4.jpg" alt="Patient" /></a>
+                    </div>
+                    <div class="pat-info-cont col ps-3">
+                      <h5 class="pat-name"><a href="#" class="text-black">Michelle Fairfax</a></h5>
+                      <h6>MaxAid Hospital</h6>
+                      <div class="patient-details-col">
+                        <span>#PT0025</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pat-info-right text-sm-end">
+                    <div class="price">$450</div>
+                    <div class="view-btn">
+                      <a href="invoice-view.html" class="btn btn-sm btn-outline-primary">View</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End of history item block -->
+            
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+              <div class="p-3 rounded-3 bg-white shadow-sm h-100">
+                <div class="patient-top-details d-flex justify-content-between" style="border-bottom: dashed 2px #a3a1a1; padding-bottom: 7px; margin-bottom: 10px;">
+                  <div>
+                    <span class="invoice-id" style="font-size: 15px;">#INV-0010</span>
+                  </div>
+                  <div>
+                    <span class="date-col d-flex align-items-center" style="color: #858585;">
+                      <span class="material-symbols-outlined" style="width: 20px; margin-right: 0px; font-size: 12px;">
+                        calendar_month
+                      </span>
+                      14-03-2020
+                    </span>
+                  </div>
+                </div>
+                <div class="d-flex flex-sm-row align-items-center">               
+                  <div class="d-flex align-items-center mb-2 mb-sm-0">
+                    <div class="col-4 col-sm-3">
+                      <a href="#"><img class="img-fluid rounded-pill" src="img/avatar/patient4.jpg" alt="Patient" /></a>
+                    </div>
+                    <div class="pat-info-cont col ps-3">
+                      <h5 class="pat-name"><a href="#" class="text-black">Michelle Fairfax</a></h5>
+                      <h6>MaxAid Hospital</h6>
+                      <div class="patient-details-col">
+                        <span>#PT0025</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pat-info-right text-sm-end">
+                    <div class="price">$450</div>
+                    <div class="view-btn">
+                      <a href="invoice-view.html" class="btn btn-sm btn-outline-primary">View</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+        <!-- Cancel Modal -->
+        <div class="modal fade" id="cancelModal" tabindex="-1" aria-labelledby="cancelModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="cancelModalLabel">Cancel Invoice #INV-0010</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form id="cancelForm">
+                  <div class="mb-2">
+                    <label for="cancelReason" class="form-label">Reason for Cancellation</label>
+                    <div class="d-flex justify-content-center">
+                    <textarea class="form-control" id="cancelReason" rows="3" placeholder="Write your reason here..."></textarea>
+                  </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" form="cancelForm" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      
+        <div class="osahan-page-footer mt-auto py-3 px-2 bg-white shadow">
+          <div class="d-flex justify-content-between">
+            <div class="text-center lh-1 text-decoration-none col">
+              <a href="home.html" class="text-decoration-none">
+                <div>
+                  <span class="material-symbols-outlined fs-1 icon text-secondary"
+                    >home</span
+                  >
+                </div>
+              </a>
+              <a href="home.html" class="text-decoration-none text-secondary"
+                >Home</a
+              >
+            </div>
+            <div class="text-center lh-1 col">
+              <div>
+                <a href="favorite.html"
+                  ><span class="material-symbols-outlined fs-1 text-secondary">
+                    home_health
+                    </span></a
+                >
+              </div>
+              <a
+                href="favorite.html"
+                class="text-btn text-decoration-none text-secondary"
+                >Hospital</a
+              >
+            </div>
+            <div class="text-center lh-1 col">
+              <div>
+                <a href="clinical-fav.html"
+                  ><span class="material-symbols-outlined fs-1 text-secondary">
+                    help_clinic
+                    </span></a
+                >
+              </div>
+              <a
+                href="clinical-fav.html"
+                class="text-btn text-decoration-none text-secondary"
+                >Clinic</a
+              >
+            </div>
+            <div class="text-center lh-1 col">
+              <div>
+                <a href="diagnostic-fav.html"
+                  ><span class="material-symbols-outlined fs-1 text-secondary">
+                    biotech
+                    </span></a
+                >
+              </div>
+              <a
+                href="diagnostic-fav.html"
+                class="text-btn text-decoration-none text-secondary"
+                >Diagnostic</a
+              >
+            </div>
+            <div class="text-center lh-1 col">
+              <div>
+                <a href="History.html"
+                  ><span class="material-symbols-outlined fs-1 text-primary">
+                    overview
+                    </span></a
+                >
+              </div>
+              <a
+                href="History.html"
+                class="text-btn text-decoration-none text-primary"
+                >History</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="osahan-page-footer mt-auto py-3 px-2 bg-white shadow">
+        <div class="d-flex justify-content-between">
+          <div class="text-center lh-1 text-decoration-none col">
+            <a href="home.html" class="text-decoration-none">
+              <div>
+                <span class="material-symbols-outlined fs-1 icon text-secondary"
+                  >home</span
+                >
+              </div>
+            </a>
+            <a href="home.html" class="text-decoration-none text-secondary"
+              >Home</a
+            >
+          </div>
+          <div class="text-center lh-1 col">
+            <div>
+              <a href="favorite.html"
+                ><span class="material-symbols-outlined fs-1 text-secondary">
+                  home_health
+                  </span></a
+              >
+            </div>
+            <a
+              href="favorite.html"
+              class="text-btn text-decoration-none text-secondary"
+              >Hospital</a
+            >
+          </div>
+          <div class="text-center lh-1 col">
+            <div>
+              <a href="clinical-fav.html"
+                ><span class="material-symbols-outlined fs-1 text-secondary">
+                  help_clinic
+                  </span></a
+              >
+            </div>
+            <a
+              href="clinical-fav.html"
+              class="text-btn text-decoration-none text-secondary"
+              >Clinic</a
+            >
+          </div>
+          <div class="text-center lh-1 col">
+            <div>
+              <a href="diagnostic-fav.html"
+                ><span class="material-symbols-outlined fs-1 text-secondary">
+                  biotech
+                  </span></a
+              >
+            </div>
+            <a
+              href="diagnostic-fav.html"
+              class="text-btn text-decoration-none text-secondary"
+              >Diagnostic</a
+            >
+          </div>
+          <div class="text-center lh-1 col">
+            <div>
+              <a href="#"
+                ><span class="material-symbols-outlined fs-1 text-secondary">
+                  overview
+                  </span></a
+              >
+            </div>
+            <a
+              href="#"
+              class="text-btn text-decoration-none text-secondary"
+              >History</a
+            >
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <nav id="main-nav">
+      <ul class="second-nav">
+        <li class="osahan-user-profile bg-primary">
+          <a href="my-account.html"><div class="d-flex align-items-center gap-2">
+            <img
+              src="img/girl.jpg"
+              alt
+              class="rounded-pill img-fluid cw-30"
+            />
+            <div class="ps-1">
+              <h6 class="fw-bold text-white mb-0">Hey, Samantha!</h6>
+              <p class="text-white-50 m-0 small">+91 12345-67890</p>
+            </div>
+          </div></a>
+        </li>
+        <li>
+          <a
+          href="my-profile.html"
+          class="d-flex align-items-center gap-4 mb- text-decoration-none text-black"
+        >
+          <span class="material-symbols-outlined">person</span>
+          <p class="text-black message-head mb-0">My Profile</p>
+        </a>
+        </li>
+        <li>
+          <a
+          href="wishlist.html"
+          class="d-flex align-items-center gap-4 mb- text-decoration-none  "
+        >
+        <span class="material-symbols-outlined">
+          bookmark
+          </span>
+        <p class="  message-head mb-0">Wishlist</p>
+        </a>
+        </li>
+        <li>
+          <a
+          href="account-security.html"
+          class="d-flex align-items-center gap-4 mb- text-decoration-none text-black"
+        >
+          <span class="material-symbols-outlined">verified_user</span>
+          <p class="text-black message-head mb-0">Account Security</p>
+        </a>
+        </li>
+        <li>
+          <a
+          href="app-appearance.html"
+          class="d-flex align-items-center gap-4 mb-0 text-decoration-none text-black"
+        >
+          <span class="material-symbols-outlined">visibility</span>
+          <p class="text-black message-head mb-0">App Appearance</p>
+        </a>
+        </li>
+        <li>
+          <a
+          href="help-support.html"
+          class="d-flex align-items-center gap-4 mb-0 text-decoration-none text-black"
+        >
+          <span class="material-symbols-outlined">description</span>
+          <p class="text-black message-head mb-0">Help & Support</p>
+          
+        </a>
+        </li>
+        <li>
+          <a
+          href="#"
+          class="d-flex align-items-center gap-4 mb-0 text-decoration-none text-black"
+        >
+          <span class="material-symbols-outlined">groups</span>
+          <p class="text-black message-head mb-0">Invite Friends</p>
+        </a>
+        </li>
+        <li>
+          <a
+          href
+          class="d-flex align-items-center gap-4 mb-4 text-decoration-none"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasBottom"
+          aria-controls="offcanvasBottom"
+        >
+          <span class="material-symbols-outlined text-danger">logout</span>
+          <p class="text-danger message-head mb-0">Logout</p>
+        </a>
+        </li>
+      </ul>
+      <ul class="bottom-nav">
+        <li class="sidebar-footer d-flex justify-content-center" >
+          Version 1.0.0
+        </li>
+      </ul>
+    </nav>
+    <div
+          class="offcanvas offcanvas-bottom"
+          tabindex="-1"
+          id="offcanvasBottom"
+          aria-labelledby="offcanvasBottomLabel"
+        >
+          <div class="offcanvas-body p-2">
+            <div class="text-center">
+              <div class="fs-1">
+                <span class="material-symbols-outlined text-danger"
+                  >logout</span
+                >
+              </div>
+              <h5 class="text-danger mb-2">Logout</h5>
+              <p class="mb-3 fs-5 text-dark">
+                Are you sure you want to log out?
+              </p>
+              <div class="d-flex gap-3 justify-content-center">
+                <button
+                  type="button"
+                  class="btn btn-outline-primary rounded-5 px-3 py-2 btn-lg"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  Cancel
+                </button>
+                <a href="login-input.html"><button
+                  type="button"
+                  class="btn bg-primary text-white rounded-5 px-3 btn-lg"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  Yes. Logout
+                </button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <script
+      src="vender/bootstrap/js/bootstrap.bundle.min.js"
+      type="f8b04243f1b32a1ddbd07a8e-text/javascript"
+    ></script>
+
+    <script
+      src="vender/jquery/jquery.min.js"
+      type="f8b04243f1b32a1ddbd07a8e-text/javascript"
+    ></script>
+
+    <script
+      src="vender/sidebar/hc-offcanvas-nav.js"
+      type="f8b04243f1b32a1ddbd07a8e-text/javascript"
+    ></script>
+
+    <script
+      src="js/script.js"
+      type="f8b04243f1b32a1ddbd07a8e-text/javascript"
+    ></script>
+    <script
+      src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
+      data-cf-settings="f8b04243f1b32a1ddbd07a8e-|49"
+      defer
+    ></script>
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+      integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+      data-cf-beacon='{"rayId":"89e514098d022e9d","version":"2024.4.1","r":1,"token":"dd471ab1978346bbb991feaa79e6ce5c","b":1}'
+      crossorigin="anonymous"
+    ></script>
+  </body>
+
+ </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/logo.png" type="image/png" />
+    <title>Health Care</title>
+
+    <link rel="stylesheet" href="vender/bootstrap/css/bootstrap.min.css" />
+
+    <link
+      rel="stylesheet"
+      href="../../../cdn.jsdelivr.net/npm/bootstrap-icons%401.10.3/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" href="vender/sidebar/demo.css" />
+
+    <link
+      rel="stylesheet"
+      href="vender/materialdesign/css/materialdesignicons.min.css"
+    />
+
+    <link
+    rel="stylesheet"
+    href="assets/plugins/fontawesome/css/fontawesome.min.css"
+  />
+
+  <script
+      src="https://kit.fontawesome.com/a30079436d.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body style="background-color: #f8f9fa;">
+    <div class="osahan-page d-flex flex-column vh-100 bg-light">
+      <div class="osahan-page-header d-flex align-items-center justify-content-between  p-3 bg-white shadow-sm">
+        <a href="home.html" class="text-black"><span class="mdi mdi-arrow-left mdi-18px"></span></a>
+        <h6 class="mb-0 ms-3 me-auto text-black fw-bold">History</h6>
+        <div class="d-flex align-items-center gap-3">
+          <a href="notification.html" class="icon"><span class="mdi mdi-bell-outline mdi-18px"></span></a>
+          <a href="#" class="toggle d-flex align-items-center justify-content-center bg-white icon fs-5 hc-nav-trigger hc-nav-1" role="button" aria-controls="hc-nav-1"><i class="bi bi-list mdi-18px"></i></a>
+        </div>
+      </div>  
+
+      <div class="" style="overflow-y: scroll;">
+      <div
+          class="col-12 col-md-6 col-lg-4 gap-4 p-3 m-2 rounded-3 bg-white shadow-sm mb-2"
+        >
+        <div class="patient-top-details d-flex justify-content-between" style="border-bottom: dashed 2px #a3a1a1; padding-bottom: 7px; margin-bottom: 10px;">
+          <div>
+            <span class="invoice-id" style="font-size: 15px;">#INV-0010</span>
+          </div>
+          <div class="">
+            <span class="date-col d-flex align-items-center" style="color: #858585;"><span class="material-symbols-outlined" style="width: 20px; margin-right: 0px;  font-size: 12px;">
+              calendar_month
+              </span>14-03-2020</span>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between">               
+          <div class="d-flex row col-10" style="flex-grow: 1;">
+            <div class="col-4">
+              <a href="#"><img class=" img-fluid rounded-pill" src="img/avatar/patient4.jpg" /></a>
+            </div>
+            <div class="pat-info-cont col-8 my-auto" >
+              <h5 class="pat-name"><a href="#">Michelle Fairfax</a></h5>
+              <div class="patient-details-col">
+                <span>#PT0025</span>
+              </div>
+            </div>
+          </div>
+          <div class="pat-info-right col-2 my-auto" style="flex-grow: 1;">
+            <div class="price">$450</div>
+            <div class="view-btn">
+                <a href="invoice-view.html" class="btn">View</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div
+          class="col-12 col-md-6 col-lg-4 gap-4 p-3 m-2 rounded-3 bg-white shadow-sm mb-2"
+        >
+        <div class="patient-top-details d-flex justify-content-between" style="border-bottom: dashed 2px #a3a1a1; padding-bottom: 7px; margin-bottom: 10px;">
+          <div>
+            <span class="invoice-id" style="font-size: 15px;">#INV-0010</span>
+          </div>
+          <div class="">
+            <span class="date-col d-flex align-items-center" style="color: #858585;"><span class="material-symbols-outlined" style="width: 20px; margin-right: 0px;  font-size: 12px;">
+              calendar_month
+              </span>14-03-2020</span>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between">               
+          <div class="d-flex row col-10" style="flex-grow: 1;">
+            <div class="col-4">
+              <a href="#"><img class="img-fluid rounded-pill" src="img/avatar/patient4.jpg" /></a>
+            </div>
+            <div class="pat-info-cont col-8 my-auto" >
+              <h5 class="pat-name"><a href="#">Michelle Fairfax</a></h5>
+              <div class="patient-details-col">
+                <span>#PT0025</span>
+              </div>
+            </div>
+          </div>
+          <div class="pat-info-right col-2 my-auto" style="flex-grow: 1;">
+            <div class="price">$450</div>
+            <div class="view-btn">
+                <a href="invoice-view.html" class="btn">View</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div
+          class="col-12 col-md-6 col-lg-4 gap-4 p-3 m-2 rounded-3 bg-white shadow-sm mb-2"
+        >
+        <div class="patient-top-details d-flex justify-content-between" style="border-bottom: dashed 2px #a3a1a1; padding-bottom: 7px; margin-bottom: 10px;">
+          <div>
+            <span class="invoice-id" style="font-size: 15px;">#INV-0010</span>
+          </div>
+          <div class="">
+            <span class="date-col d-flex align-items-center" style="color: #858585;"><span class="material-symbols-outlined" style="width: 20px; margin-right: 0px;  font-size: 12px;">
+              calendar_month
+              </span>14-03-2020</span>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between">               
+          <div class="d-flex row col-10" style="flex-grow: 1;">
+            <div class="col-4">
+              <a href="#"><img class="img-fluid rounded-pill" src="img/avatar/patient4.jpg" /></a>
+            </div>
+            <div class="pat-info-cont col-8 my-auto" >
+              <h5 class="pat-name"><a href="#">Michelle Fairfax</a></h5>
+              <div class="patient-details-col">
+                <span>#PT0025</span>
+              </div>
+            </div>
+          </div>
+          <div class="pat-info-right col-2 my-auto" style="flex-grow: 1;">
+            <div class="price">$450</div>
+            <div class="view-btn">
+                <a href="invoice-view.html" class="btn">View</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div
+          class="col-12 col-md-6 col-lg-4 gap-4 p-3 m-2 rounded-3 bg-white shadow-sm mb-2"
+        >
+        <div class="patient-top-details d-flex justify-content-between" style="border-bottom: dashed 2px #a3a1a1; padding-bottom: 7px; margin-bottom: 10px;">
+          <div>
+            <span class="invoice-id" style="font-size: 15px;">#INV-0010</span>
+          </div>
+          <div class="">
+            <span class="date-col d-flex align-items-center" style="color: #858585;"><span class="material-symbols-outlined" style="width: 20px; margin-right: 0px;  font-size: 12px;">
+              calendar_month
+              </span>14-03-2020</span>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between">               
+          <div class="d-flex row col-10" style="flex-grow: 1;">
+            <div class="col-4">
+              <a href="#"><img class="img-fluid rounded-pill" src="img/avatar/patient4.jpg" /></a>
+            </div>
+            <div class="pat-info-cont col-8 my-auto" >
+              <h5 class="pat-name"><a href="#">Michelle Fairfax</a></h5>
+              <div class="patient-details-col">
+                <span>#PT0025</span>
+              </div>
+            </div>
+          </div>
+          <div class="pat-info-right col-2 my-auto" style="flex-grow: 1;">
+            <div class="price">$450</div>
+            <div class="view-btn">
+                <a href="invoice-view.html" class="btn">View</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div
+          class="col-12 col-md-6 col-lg-4 gap-4 p-3 m-2 rounded-3 bg-white shadow-sm mb-2"
+        >
+        <div class="patient-top-details d-flex justify-content-between" style="border-bottom: dashed 2px #a3a1a1; padding-bottom: 7px; margin-bottom: 10px;">
+          <div>
+            <span class="invoice-id" style="font-size: 15px;">#INV-0010</span>
+          </div>
+          <div class="">
+            <span class="date-col d-flex align-items-center" style="color: #858585;"><span class="material-symbols-outlined" style="width: 20px; margin-right: 0px;  font-size: 12px;">
+              calendar_month
+              </span>14-03-2020</span>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between">               
+          <div class="d-flex row col-10" style="flex-grow: 1;">
+            <div class="col-4">
+              <a href="#"><img class="img-fluid rounded-pill" src="img/avatar/patient4.jpg" /></a>
+            </div>
+            <div class="pat-info-cont col-8 my-auto" >
+              <h5 class="pat-name"><a href="#">Michelle Fairfax</a></h5>
+              <div class="patient-details-col">
+                <span>#PT0025</span>
+              </div>
+            </div>
+          </div>
+          <div class="pat-info-right col-2 my-auto" style="flex-grow: 1;">
+            <div class="price">$450</div>
+            <div class="view-btn">
+                <a href="invoice-view.html" class="btn">View</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div
+          class="col-12 col-md-6 col-lg-4 gap-4 p-3 m-2 rounded-3 bg-white shadow-sm mb-2"
+        >
+        <div class="patient-top-details d-flex justify-content-between" style="border-bottom: dashed 2px #a3a1a1; padding-bottom: 7px; margin-bottom: 10px;">
+          <div>
+            <span class="invoice-id" style="font-size: 15px;">#INV-0010</span>
+          </div>
+          <div class="">
+            <span class="date-col d-flex align-items-center" style="color: #858585;"><span class="material-symbols-outlined" style="width: 20px; margin-right: 0px;  font-size: 12px;">
+              calendar_month
+              </span>14-03-2020</span>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between">               
+          <div class="d-flex row col-10" style="flex-grow: 1;">
+            <div class="col-4">
+              <a href="#"><img class="img-fluid rounded-pill" src="img/avatar/patient4.jpg" /></a>
+            </div>
+            <div class="pat-info-cont col-8 my-auto" >
+              <h5 class="pat-name"><a href="#">Michelle Fairfax</a></h5>
+              <div class="patient-details-col">
+                <span>#PT0025</span>
+              </div>
+            </div>
+          </div>
+          <div class="pat-info-right col-2 my-auto" style="flex-grow: 1;">
+            <div class="price">$450</div>
+            <div class="view-btn">
+                <a href="invoice-view.html" class="btn">View</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+
+      <div class="osahan-page-footer mt-auto py-3 px-2 bg-white shadow">
+        <div class="d-flex justify-content-between">
+          <div class="text-center lh-1 text-decoration-none col">
+            <a href="home.html" class="text-decoration-none">
+              <div>
+                <span class="material-symbols-outlined fs-1 icon text-secondary"
+                  >home</span
+                >
+              </div>
+            </a>
+            <a href="home.html" class="text-decoration-none text-secondary"
+              >Home</a
+            >
+          </div>
+          <div class="text-center lh-1 col">
+            <div>
+              <a href="favorite.html"
+                ><span class="material-symbols-outlined fs-1 text-secondary">
+                  home_health
+                  </span></a
+              >
+            </div>
+            <a
+              href="favorite.html"
+              class="text-btn text-decoration-none text-secondary"
+              >Hospital</a
+            >
+          </div>
+          <div class="text-center lh-1 col">
+            <div>
+              <a href="clinical-fav.html"
+                ><span class="material-symbols-outlined fs-1 text-secondary">
+                  help_clinic
+                  </span></a
+              >
+            </div>
+            <a
+              href="clinical-fav.html"
+              class="text-btn text-decoration-none text-secondary"
+              >Clinic</a
+            >
+          </div>
+          <div class="text-center lh-1 col">
+            <div>
+              <a href="diagnostic-fav.html"
+                ><span class="material-symbols-outlined fs-1 text-secondary">
+                  biotech
+                  </span></a
+              >
+            </div>
+            <a
+              href="diagnostic-fav.html"
+              class="text-btn text-decoration-none text-secondary"
+              >Diagnostic</a
+            >
+          </div>
+          <div class="text-center lh-1 col">
+            <div>
+              <a href="#"
+                ><span class="material-symbols-outlined fs-1 text-primary">
+                  overview
+                  </span></a
+              >
+            </div>
+            <a
+              href="#"
+              class="text-btn text-decoration-none text-primary"
+              >History</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav id="main-nav">
+      <ul class="second-nav">
+        <li class="osahan-user-profile bg-primary">
+          <div class="d-flex align-items-center gap-2">
+            <img
+              src="img/girl.jpg"
+              alt
+              class="rounded-pill img-fluid cw-30"
+            />
+            <div class="ps-1">
+              <h6 class="fw-bold text-white mb-0">Hey, Samantha!</h6>
+              <p class="text-white-50 m-0 small">+91 12345-67890</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a
+          href="my-profile.html"
+          class="d-flex align-items-center gap-4 mb- text-decoration-none text-black"
+        >
+          <span class="material-symbols-outlined">person</span>
+          <p class="text-black message-head mb-0">My Profile</p>
+        </a>
+        </li>
+        <li>
+          <a
+          href="account-security.html"
+          class="d-flex align-items-center gap-4 mb- text-decoration-none text-black"
+        >
+          <span class="material-symbols-outlined">verified_user</span>
+          <p class="text-black message-head mb-0">Account Security</p>
+        </a>
+        </li>
+        <li>
+          <a
+          href="app-appearance.html"
+          class="d-flex align-items-center gap-4 mb-0 text-decoration-none text-black"
+        >
+          <span class="material-symbols-outlined">visibility</span>
+          <p class="text-black message-head mb-0">App Appearance</p>
+        </a>
+        </li>
+        <li>
+          <a
+          href="help-support.html"
+          class="d-flex align-items-center gap-4 mb-0 text-decoration-none text-black"
+        >
+          <span class="material-symbols-outlined">description</span>
+          <p class="text-black message-head mb-0">Help & Support</p>
+          
+        </a>
+        </li>
+        <li>
+          <a
+          href="#"
+          class="d-flex align-items-center gap-4 mb-0 text-decoration-none text-black"
+        >
+          <span class="material-symbols-outlined">groups</span>
+          <p class="text-black message-head mb-0">Invite Friends</p>
+        </a>
+        </li>
+        <li>
+          <a
+          href
+          class="d-flex align-items-center gap-4 mb-4 text-decoration-none"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasBottom"
+          aria-controls="offcanvasBottom"
+        >
+          <span class="material-symbols-outlined text-danger">logout</span>
+          <p class="text-danger message-head mb-0">Logout</p>
+        </a>
+        </li>
+      </ul>
+      <ul class="bottom-nav">
+        <li class="sidebar-footer d-flex justify-content-center" >
+          Version 1.0.0
+        </li>
+      </ul>
+    </nav>
+    <div
+          class="offcanvas offcanvas-bottom"
+          tabindex="-1"
+          id="offcanvasBottom"
+          aria-labelledby="offcanvasBottomLabel"
+        >
+          <div class="offcanvas-body p-2">
+            <div class="text-center">
+              <div class="fs-1">
+                <span class="material-symbols-outlined text-danger"
+                  >logout</span
+                >
+              </div>
+              <h5 class="text-danger mb-2">Logout</h5>
+              <p class="mb-3 fs-5 text-dark">
+                Are you sure you want to log out?
+              </p>
+              <div class="d-flex gap-3 justify-content-center">
+                <button
+                  type="button"
+                  class="btn btn-outline-primary rounded-5 px-3 py-2 btn-lg"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="button"
+                  class="btn bg-primary text-white rounded-5 px-3 btn-lg"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                >
+                  Yes. Logout
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <script
+      src="vender/bootstrap/js/bootstrap.bundle.min.js"
+      type="f8b04243f1b32a1ddbd07a8e-text/javascript"
+    ></script>
+
+    <script
+      src="vender/jquery/jquery.min.js"
+      type="f8b04243f1b32a1ddbd07a8e-text/javascript"
+    ></script>
+
+    <script
+      src="vender/sidebar/hc-offcanvas-nav.js"
+      type="f8b04243f1b32a1ddbd07a8e-text/javascript"
+    ></script>
+
+    <script
+      src="js/script.js"
+      type="f8b04243f1b32a1ddbd07a8e-text/javascript"
+    ></script>
+    <script
+      src="../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
+      data-cf-settings="f8b04243f1b32a1ddbd07a8e-|49"
+      defer
+    ></script>
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+      integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+      data-cf-beacon='{"rayId":"89e514098d022e9d","version":"2024.4.1","r":1,"token":"dd471ab1978346bbb991feaa79e6ce5c","b":1}'
+      crossorigin="anonymous"
+    ></script>
+  </body>
+
+ </html> -->
